@@ -19,7 +19,7 @@ const Navbar = () => {
             <button className="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
             <span className="navbar-toggler-icon "></span>
             </button>
-
+           
             {/* sidebar */}
             <div className="offcanvas offcanvas-start sidebar " id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div className="offcanvas-header border-bottom text-white mt-3 px-5">
@@ -43,11 +43,11 @@ const Navbar = () => {
                 </li>
                 </ul>
 
-               <div className='m-auto'>
+               <div className='m-auto log'>
                {
                     isAuthenticated ?
                     <div className='d-flex  align-items-center'>
-                        <h5 className='m-auto me-3'><i class="fa-solid fa-user me-2"></i>{user.name}</h5>
+                        <h5 className='m-auto me-3 user_name'><i class="fa-solid fa-user me-2"></i>{user.name}</h5>
                                 <button className='text-center btn btn-dark btn-sm' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>log out</button>
 
                     </div>
